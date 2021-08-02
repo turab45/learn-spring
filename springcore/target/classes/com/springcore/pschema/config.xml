@@ -6,11 +6,7 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- services -->
 
-	<bean id="person" name="person" class="com.springcore.test.Person">
-		<property name="id" value="45" />
-		<property name="name" value="Turab Bajeer" />
-		<!-- additional collaborators and configuration for this bean go here -->
-	</bean>
+	<bean id="student" name="student" class="com.springcore.pschema.Student" p:id="45" p:name="Turab"/>
 
 
 </beans>
