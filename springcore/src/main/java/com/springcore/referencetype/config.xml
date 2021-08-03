@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- services -->
+
+	<bean id="productDetails" name="productDetails" class="com.springcore.referencetype.ProductDetails" >
+		<property name="price" value="120" />
+		<property name="status" value="Available" />
+	</bean>
+	
+	<bean id="product" name="product" class="com.springcore.referencetype.Product">
+		<property name="id" value="12" />
+		<property name="title" value="Oppo Mobile" />
+		<property name="productDetailsObj">
+			<ref bean="productDetails"/>
+		</property>
+	</bean>
+
+
+</beans>
