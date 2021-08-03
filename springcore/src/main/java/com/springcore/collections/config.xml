@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- services -->
+
+	<bean id="emp" name="employee" class="com.springcore.collections.Employee" >
+	<property name="id" value="45"></property>
+	<property name="name" value="Turab Bajeer"></property>
+	<property name="phones">
+		<list>
+			<value>123456</value>
+			<value>148148</value>
+			<value>897345</value>
+			<value>647823</value>
+			<value>345894</value>
+			<value>463535</value>
+			<value>564534</value>
+<!-- 			To insert the null value, add the null tag -->
+			<null/>
+		</list>
+	</property>
+	
+	<property name="addresses">
+		<set>
+			<value>Islamkot, Thar</value>
+			<value>Hyderabad</value>
+			<value>Jamshoro</value>
+			<value>Karachi</value>
+		</set>
+	</property>
+	
+	<property name="courses">
+		<map>
+			<entry key="java" value="2 months"/>
+			<entry key="Python" value="3 months"/>
+			<entry key="Javascript" value="4 months"/>
+			<entry key="React js" value="2 months"/>
+		</map>
+	</property>
+	
+	</bean>
+
+
+</beans>
