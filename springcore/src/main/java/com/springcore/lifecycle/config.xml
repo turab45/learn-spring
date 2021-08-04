@@ -2,10 +2,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
- http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd"
+ 	>
 	<!-- services -->
-
+	
+	<context:annotation-config />
 	<!-- XML based implementation config -->
 	<bean id="studnet" name="student" class="com.springcore.lifecycle.Student" init-method="init" destroy-method="destroy">
 		<property name="name" value="Turab Bajeer" />
@@ -14,6 +19,11 @@
 	<!-- Interfaces based config -->
 	<bean class="com.springcore.lifecycle.Course" name="course">
 		<property name="title" value="Java" />
+	</bean>
+	
+	<!-- Annotations based config -->
+	<bean class="com.springcore.lifecycle.Exam" name="exam">
+		<property name="title" value="Java Exam" />
 	</bean>
 
 </beans>

@@ -11,11 +11,13 @@ public class Main {
 		// This method is called to register the shutdown hook. To call the destroy method
 			context.registerShutdownHook();
 				
-		Student student = (Student) context.getBean("student");
+		//Student student = (Student) context.getBean("student");
 		
-		Course course = (Course) context.getBean("course");
+		//Course course = (Course) context.getBean("course");
 		
-		System.out.println(course);
+		Exam exam = (Exam) context.getBean("exam");
+		
+		System.out.println(exam);
 		
 		
 		
