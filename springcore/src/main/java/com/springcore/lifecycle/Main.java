@@ -8,13 +8,16 @@ public class Main {
 	public static void main(String[] args) {
 		
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/lifecycle/config.xml");
-		
+		// This method is called to register the shutdown hook. To call the destroy method
+			context.registerShutdownHook();
+				
 		Student student = (Student) context.getBean("student");
 		
-		System.out.println(student);
+		Course course = (Course) context.getBean("course");
 		
-		// This method is called to register the shutdown hook. To call the destroy method
-		context.registerShutdownHook();
+		System.out.println(course);
+		
+		
 		
 	}
 

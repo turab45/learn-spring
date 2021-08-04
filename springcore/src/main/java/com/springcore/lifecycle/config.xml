@@ -6,11 +6,14 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- services -->
 
-
+	<!-- XML based implementation config -->
 	<bean id="studnet" name="student" class="com.springcore.lifecycle.Student" init-method="init" destroy-method="destroy">
 		<property name="name" value="Turab Bajeer" />
 	</bean>
 
-
+	<!-- Interfaces based config -->
+	<bean class="com.springcore.lifecycle.Course" name="course">
+		<property name="title" value="Java" />
+	</bean>
 
 </beans>
