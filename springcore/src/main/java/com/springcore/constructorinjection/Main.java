@@ -11,7 +11,8 @@ public class Main {
 		
 		Person person = (Person) context.getBean("person");
 		
-		System.out.println(person);
+		Ambiguity ambiguity = (Ambiguity) context.getBean("amb");
+		System.out.println(ambiguity);
 		
 	}
 
