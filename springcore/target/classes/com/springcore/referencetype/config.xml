@@ -14,9 +14,14 @@
 	<bean id="product" name="product" class="com.springcore.referencetype.Product">
 		<property name="id" value="12" />
 		<property name="title" value="Oppo Mobile" />
+<!-- 		First approach -->
 		<property name="productDetailsObj">
 			<ref bean="productDetails"/>
 		</property>
+		
+		<!-- 		Second approach 
+		<property name="productDetailsObj" ref="productDetails"/>
+		-->
 	</bean>
 
 
