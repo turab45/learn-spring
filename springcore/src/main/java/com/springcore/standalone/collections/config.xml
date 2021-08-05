@@ -21,9 +21,15 @@
 		<value>Govinda</value>
 	</util:list>
 	
+	<util:map map-class="java.util.HashMap" id="phoneNumbers">
+		<entry key="Telenor" value="12345" />
+		<entry key="Jazz" value="67890" />
+		<entry key="Ufone" value="13579" />
+	</util:map>
 	
 	<bean name="person" class="com.springcore.standalone.collections.Person">
 		<property name="friends" ref="myBestFriends" />
+		<property name="phones" ref="phoneNumbers" />
 	</bean>
 
 

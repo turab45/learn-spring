@@ -12,6 +12,10 @@ public class Main {
 		Person person = (Person) context.getBean("person", Person.class);
 		
 		System.out.println(person);
+		System.out.println(person.getFriends().getClass().getName());
+		System.out.println("___________________________________________");
+		System.out.println(person.getPhones().getClass().getName());
+		
 
 	}
 

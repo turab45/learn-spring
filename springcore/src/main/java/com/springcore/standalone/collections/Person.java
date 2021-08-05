@@ -1,9 +1,11 @@
 package com.springcore.standalone.collections;
 
 import java.util.List;
+import java.util.Map;
 
 public class Person {
 	private List<String> friends;
+	private Map<String, String> phones;
 
 	public List<String> getFriends() {
 		return friends;
@@ -13,10 +15,19 @@ public class Person {
 		this.friends = friends;
 	}
 
+	public Map<String, String> getPhones() {
+		return phones;
+	}
+
+	public void setPhones(Map<String, String> phones) {
+		this.phones = phones;
+	}
+
 	@Override
 	public String toString() {
-		return "Person [friends=" + friends + "]";
+		return "Person [friends=" + friends + ", phones=" + phones + "]";
 	}
+
 	
 	
 }
