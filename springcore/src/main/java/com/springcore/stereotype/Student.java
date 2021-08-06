@@ -3,9 +3,11 @@ package com.springcore.stereotype;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component // @Component("object") to change the name of reference variable. by default it is student same as class name
+@Scope("prototype") // This scope means create the new object everytime. by default is singelton (Do not create the create the new object everytime)
 public class Student {
 	@Value("Turab")
 	private String name;
