@@ -12,6 +12,8 @@ public class Main {
 		Student student = (Student) context.getBean("student");
 		
 		System.out.println(student);
+		System.out.println(student.getAddresses());
+		System.out.println(student.getAddresses().getClass().getName());
 		
 		
 		
