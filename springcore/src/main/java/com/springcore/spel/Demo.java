@@ -19,6 +19,9 @@ public class Demo {
 	@Value("#{ new java.lang.String('Turab Bajeer')}")
 	private String name;
 	
+	@Value("#{ 8 > 3}") // True, by default it is false
+	private boolean isActive;
+	
 	public Integer getX() {
 		return x;
 	}
@@ -49,14 +52,18 @@ public class Demo {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
+	public boolean isActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + ", isActive=" + isActive
+				+ "]";
 	}
-	
-	
-	
-	
-	
 	
 }
