@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.dao.StudentDao;
 import com.entities.Student;
+import com.mysql.jdbc.UpdatableResultSet;
 
 /**
  * Hello world!
@@ -18,20 +19,23 @@ public class App
        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
        
        StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-//       
+//       ADD STUDENT
 //       Student student = new Student();
 //       student.setName("Jatender");
 //       student.setCity("Umerkot");
 //       
 //       Integer result = studentDao.add(student);
        
-       Student student = new Student();
-       student.setId(1);
-       student.setName("Turab Bajeer");
-       student.setCity("Islamkot, Thar");
+//       UPDATE STUDENT
+//       Student student = new Student();
+//       student.setId(1);
+//       student.setName("Turab Bajeer");
+//       student.setCity("Islamkot, Thar");
+//       
+//       Integer result = studentDao.update(student);
        
-       Integer result = studentDao.update(student);
-       
-       System.out.println("Recoreds updated "+ result);
+// 		DELETE STUDENT
+       Integer result = studentDao.delete(2);
+       System.out.println("Student deleted "+result);
     }
 }
