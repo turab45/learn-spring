@@ -1,12 +1,12 @@
 package com.spring.jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.dao.StudentDao;
 import com.entities.Student;
-import com.mysql.jdbc.UpdatableResultSet;
 
 /**
  * Hello world!
@@ -39,7 +39,12 @@ public class App
 //       System.out.println("Student deleted "+result);
        
 //		GET STUDENT BY ID
-       Student student = studentDao.getStudent(1);
-       System.out.println(student);
+//       Student student = studentDao.getStudent(1);
+//       System.out.println(student);
+ 
+// GET ALL STUDENTS
+       List<Student> allStudents = studentDao.getAllStudents();
+       for(Student s: allStudents)
+    	   System.out.println(s);
     }
 }
