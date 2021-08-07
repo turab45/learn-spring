@@ -35,7 +35,11 @@ public class App
 //       Integer result = studentDao.update(student);
        
 // 		DELETE STUDENT
-       Integer result = studentDao.delete(2);
-       System.out.println("Student deleted "+result);
+//       Integer result = studentDao.delete(2);
+//       System.out.println("Student deleted "+result);
+       
+//		GET STUDENT BY ID
+       Student student = studentDao.getStudent(1);
+       System.out.println(student);
     }
 }
