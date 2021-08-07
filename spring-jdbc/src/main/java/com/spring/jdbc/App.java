@@ -18,13 +18,20 @@ public class App
        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
        
        StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
+//       
+//       Student student = new Student();
+//       student.setName("Jatender");
+//       student.setCity("Umerkot");
+//       
+//       Integer result = studentDao.add(student);
        
        Student student = new Student();
-       student.setName("Jatender");
-       student.setCity("Umerkot");
+       student.setId(1);
+       student.setName("Turab Bajeer");
+       student.setCity("Islamkot, Thar");
        
-       Integer result = studentDao.add(student);
+       Integer result = studentDao.update(student);
        
-       System.out.println("Recoreds inserted "+ result);
+       System.out.println("Recoreds updated "+ result);
     }
 }
