@@ -1,5 +1,7 @@
 package com.spring.orm.daoimpl;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -18,6 +20,29 @@ public class ProductDaoImpl implements ProductDao{
 		return (Integer) this.hibernateTemplate.save(product);
 	}
 
+	@Transactional
+	public void update(Product product) {
+		// update
+		this.hibernateTemplate.update(product);
+	}
+
+	@Transactional
+	public void delete(Integer productId) {
+		// TODO Auto-generated method stub
+		Product product = this.hibernateTemplate.get(Product.class, productId);
+		this.hibernateTemplate.delete(product);;
+	}
+
+	public Product getProductById(Integer productId) {
+		// Get single product by id
+		return this.hibernateTemplate.get(Product.class, productId);
+	}
+
+	public List<Product> getAllProducts() {
+		// Get all products
+		return this.hibernateTemplate.loadAll(Product.class);
+	}
+	
 	public HibernateTemplate getHibernateTemplate() {
 		return hibernateTemplate;
 	}
@@ -25,6 +50,4 @@ public class ProductDaoImpl implements ProductDao{
 	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
 		this.hibernateTemplate = hibernateTemplate;
 	}
-	
-	
 }
