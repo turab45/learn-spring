@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<%
+	String name = request.getAttribute("name").toString();
+
+%>
 <h2>This is Home Page</h2>
+<h3>Welcome <%=name %></h3>
 </body>
 </html>
