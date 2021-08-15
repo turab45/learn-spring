@@ -1,4 +1,5 @@
 <!doctype html>
+<%@page isELIgnored="false" %>
 <html lang="en">
 <head>
 <!-- Required meta tags -->
@@ -18,10 +19,11 @@
 
 
 
-	<div class="container">
+	<div class="container m-5">
 	
 	
-	<h3 class="text-center m-5">Registration Form</h3>
+	<h3 class="text-center">${title}</h3>
+	<p class="text-center">${desc }</p>
 		<form action="contact-us" method="post">
 			<div class="mb-3">
 				<label for="name" class="form-label">User Name</label> <input
