@@ -30,5 +30,6 @@ public class HomeController {
 		modelAndView.setViewName("about");
 		return modelAndView;
 	}
+	
 }
 
