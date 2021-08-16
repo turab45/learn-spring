@@ -1,3 +1,4 @@
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,6 +23,12 @@
 		<div class="card border-secondary mx-auto mt-5" style="width: 50%">
 			<div class="card-body">
 				<h2 class="text-center m-3 ">Registrarion Form</h2>
+				
+				
+				<div class="alert alert-danger" role="alert">
+				<form:errors path="student.*"/>
+</div>
+				
 				<form action="process" method="post">
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label">Your
