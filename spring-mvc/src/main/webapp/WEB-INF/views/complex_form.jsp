@@ -1,4 +1,5 @@
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,6 +13,9 @@
 	rel="stylesheet"
 	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
 	crossorigin="anonymous">
+	
+<link href="<c:url value='/resources/css/style.css' />">
+<script src="<c:url value='/resources/js/script.js'/>"></script>
 
 <title>Handle Complex Form</title>
 </head>
@@ -21,6 +25,8 @@
 	<div class="container">
 
 		<div class="card border-secondary mx-auto mt-5" style="width: 50%">
+		
+			<img alt="My Image" src="<c:url value='/resources/images/spring logo.png' />">
 			<div class="card-body">
 				<h2 class="text-center m-3 ">Registrarion Form</h2>
 				
