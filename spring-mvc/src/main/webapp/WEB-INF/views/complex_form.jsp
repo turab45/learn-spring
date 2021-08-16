@@ -38,13 +38,13 @@
 
 					<div class="mb-3">
 						<label for="dob" class="form-label">Your Date of Birth</label> <input
-							type="text"  name="dob" class="form-control" id="dob"
+							type="text" name="dob" class="form-control" id="dob"
 							placeholder="Enter your date of birth (DD/MM/YYYY)">
 					</div>
 
 					<div class="mb-3">
-						<label class="form-label">Select courses</label> 
-						<select name="courses" class="form-select" multiple>
+						<label class="form-label">Select courses</label> <select
+							name="courses" class="form-select" multiple>
 							<option selected value="Java">Java</option>
 							<option value="Python">Python</option>
 							<option value="Spring">Spring</option>
@@ -57,26 +57,43 @@
 						<div class="form-check">
 
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio"
-									name="gender" id="inlineRadio1" value="Male">
-								<label class="form-check-label" for="inlineRadio1">Male</label>
+								<input class="form-check-input" type="radio" name="gender"
+									id="inlineRadio1" value="Male"> <label
+									class="form-check-label" for="inlineRadio1">Male</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio"
-									name="gender" id="inlineRadio2" value="Female">
-								<label class="form-check-label" for="inlineRadio2">Female</label>
+								<input class="form-check-input" type="radio" name="gender"
+									id="inlineRadio2" value="Female"> <label
+									class="form-check-label" for="inlineRadio2">Female</label>
 							</div>
 
 						</div>
 					</div>
 
 					<div class="mb-3">
-						<label class="form-label">Select type</label> 
-						<select name="type" class="form-select" aria-label="Default select example">
+						<label class="form-label">Select type</label> <select name="type"
+							class="form-select" aria-label="Default select example">
 							<option selected value="0">Select type</option>
 							<option value="new">New Student</option>
 							<option value="old">Old Student</option>
 						</select>
+					</div>
+
+					<div class="card">
+						<div class="card-body">
+
+							<div class="mb-3">
+								<label class="form-label">Your Street</label> <input type="text"
+									name="address.street" class="form-control"
+									id="exampleInputEmail1" aria-describedby="emailHelp"
+									placeholder="Enter your street">
+							</div>
+							<div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Your
+									Street</label> <input type="text" name="address.city"
+									class="form-control" placeholder="Enter your city">
+							</div>
+						</div>
 					</div>
 
 					<div class="container text-center mt-3">

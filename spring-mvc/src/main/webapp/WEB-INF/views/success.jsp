@@ -15,11 +15,12 @@
 <title>Success!</title>
 </head>
 <body>
-	<h3>Welcone, ${user.userName}</h3>
-	<h3>Your email addreess is ${user.email}</h3>
-	<h3>Your password is ${user.password}</h3>
+<%-- 	<h3>Welcone, ${user.userName}</h3> --%>
+<%-- 	<h3>Your email addreess is ${user.email}</h3> --%>
+<%-- 	<h3>Your password is ${user.password}</h3> --%>
 
 
+<h1>${student} }</h1>
 
 
 	<!-- Optional JavaScript; choose one of the two! -->
