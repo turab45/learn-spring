@@ -42,10 +42,10 @@ public class HomeController {
 		return modelAndView;
 	}
 	
-	@ExceptionHandler(value = Exception.class)
-	public String exceptionHandler() {
-		return "exception";
-	}
+//	@ExceptionHandler(value = Exception.class)
+//	public String exceptionHandler() {
+//		return "exception";
+//	}
 	
 }
 

@@ -25,6 +25,9 @@ public class ContactController {
 	
 	@RequestMapping(path="/contact", method = RequestMethod.GET)
 	public String contact() {
+		
+		int a = 12/0;
+		
 		return "contact";
 	}
 	
