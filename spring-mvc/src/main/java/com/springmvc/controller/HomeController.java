@@ -2,6 +2,7 @@ package com.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +20,10 @@ public class HomeController {
 	@RequestMapping(path="/home", method = RequestMethod.GET)
 	public String home(Model model) {
 		model.addAttribute("name", "Turab");
+		
+		String string = null;
+		string.length();
+		
 		System.out.println("This is home url");
 		return "index";
 	}
@@ -35,6 +40,11 @@ public class HomeController {
 		modelAndView.addObject("name", "Turab Bajeer");
 		modelAndView.setViewName("about");
 		return modelAndView;
+	}
+	
+	@ExceptionHandler(value = Exception.class)
+	public String exceptionHandler() {
+		return "exception";
 	}
 	
 }
