@@ -24,6 +24,8 @@
 
 	<div class="container">
 
+
+
 		<div class="card border-secondary mx-auto mt-5" style="width: 50%">
 		
 			<img alt="My Image" src="<c:url value='/resources/images/spring logo.png' />">

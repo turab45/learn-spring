@@ -30,7 +30,7 @@ public class ProductDaoImpl implements ProductDao{
 	public void delete(Integer productId) {
 		// TODO Auto-generated method stub
 		Product product = this.hibernateTemplate.get(Product.class, productId);
-		this.hibernateTemplate.delete(product);;
+		this.hibernateTemplate.delete(product);
 	}
 
 	public Product getProductById(Integer productId) {

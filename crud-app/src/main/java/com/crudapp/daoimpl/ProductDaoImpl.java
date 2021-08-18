@@ -29,7 +29,7 @@ public class ProductDaoImpl implements ProductDao{
 	@Transactional
 	public void delete(Integer productId) {
 		// delete the product
-		Product product = this.hibernateTemplate.load(Product.class, productId);
+		Product product = this.hibernateTemplate.get(Product.class, productId);
 		this.hibernateTemplate.delete(product);;
 	}
 
@@ -41,6 +41,17 @@ public class ProductDaoImpl implements ProductDao{
 	public List<Product> getAllProducts() {
 		// get all the products
 		return this.hibernateTemplate.loadAll(Product.class);
+	}
+
+	
+	// getters and setters of hibernateTemplate
+	
+	public HibernateTemplate getHibernateTemplate() {
+		return hibernateTemplate;
+	}
+
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
 	}
 	
 	
