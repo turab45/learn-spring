@@ -9,15 +9,16 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import com.crudapp.dao.ProductDao;
 import com.crudapp.entities.Product;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 public class ProductDaoImpl implements ProductDao{
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
 
 	@Transactional
-	public Integer add(Product product) {
+	public void add(Product product) {
 		// create a new product
-		return (Integer) this.hibernateTemplate.save(product);
+		this.hibernateTemplate.saveOrUpdate(product);
 	}
 
 	@Transactional
@@ -35,12 +36,14 @@ public class ProductDaoImpl implements ProductDao{
 
 	public Product getProductById(Integer productId) {
 		// get single product
-		return this.hibernateTemplate.load(Product.class, productId);
+		return this.hibernateTemplate.get(Product.class, productId);
 	}
 
 	public List<Product> getAllProducts() {
 		// get all the products
-		return this.hibernateTemplate.loadAll(Product.class);
+		List<Product> all = this.hibernateTemplate.loadAll(Product.class);
+		java.util.Collections.reverse(all);
+		return all;
 	}
 
 	

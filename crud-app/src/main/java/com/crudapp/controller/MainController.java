@@ -47,5 +47,15 @@ public class MainController {
 		return new RedirectView(request.getContextPath()+"/");
 	}
 	
+	@RequestMapping(path = "/update/{id}")
+	public String update(@PathVariable("id") Integer id, HttpServletRequest request, Model model) {
+		Product product = productDao.getProductById(id);
+		System.out.println(product);
+		
+		model.addAttribute("title", product.getName());
+		model.addAttribute("product", product);
+		return "update-product";
+	}
+	
 	
 }
